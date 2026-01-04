@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/waqardev/personal-projects/dsa-project/bindings/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
