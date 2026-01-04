@@ -2,7 +2,7 @@
 
 A high-performance, terminal-based file manager for Windows built with a hybrid architecture. This project combines the speed of **C++** for backend file operations with the modern, rich user interface capabilities of **Python (Textual)** to deliver a seamless file management experience directly in your terminal.
 
-![File Ranger Demo](demo.png)
+![File Ranger Demo](./assets/image.png)
 
 ## ✨ Features
 
