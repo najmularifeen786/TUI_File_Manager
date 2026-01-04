@@ -38,7 +38,7 @@ Follow these steps to set up File Ranger on your Windows system:
 ### 1. Clone the Repository
 
 ```powershell
-git clone https://github.com/WaqarAhmad321/file_ranger.git
+git clone https://github.com/najmularifeen786/TUI_File_Manager.git
 cd file_ranger
 ```
 
