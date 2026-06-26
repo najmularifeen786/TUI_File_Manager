@@ -1,3 +1,0 @@
-/home/waqardev/personal-projects/dsa-project/bindings/build/CMakeFiles/backend.dir
-/home/waqardev/personal-projects/dsa-project/bindings/build/CMakeFiles/edit_cache.dir
-/home/waqardev/personal-projects/dsa-project/bindings/build/CMakeFiles/rebuild_cache.dir
