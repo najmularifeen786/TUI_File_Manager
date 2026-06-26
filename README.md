@@ -290,13 +290,13 @@ Built with cutting-edge technologies:
 ## 👥 Authors
 
 ### Najmul Arifeen
-**Backend Architecture & Data Structures**
+**Data Structures**
 * najmularifeen786@gmail.com
 * **[GitHub](https://github.com/najmularifeen786)**
 * **[LinkedIn](https://www.linkedin.com/in/najmularifeen/)**
 
 ### Waqar Ahmad
-**Frontend UI & Integration - Project Lead**
+**Frontend UI, Backend Architecture & Integration**
 * codewithwaqarahmad@gmail.com
 * **[GitHub](https://github.com/WaqarAhmad321)**
 * **[LinkedIn](https://www.linkedin.com/in/waqar-ahmad321/)**
