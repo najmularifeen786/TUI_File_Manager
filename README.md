@@ -6,6 +6,9 @@ A high-performance terminal-based file manager built with a hybrid architecture 
 
 ---
 
+
+![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.gif)
+
 ## 📋 Table of Contents
 
 - [Features](#-features)
