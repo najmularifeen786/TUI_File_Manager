@@ -3,11 +3,17 @@
 **A high-performance terminal file manager built with C++ and Python.**
  
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![C++](https://img.shields.io/badge/C%2B%2B-17-blue)](https://isocpp.org/)
-[![CMake](https://img.shields.io/badge/CMake-3.15%2B-blue)](https://cmake.org/)
-[![Build](https://img.shields.io/badge/Build-Passing-brightgreen)]()
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)]()
+[![C++](https://img.shields.io/badge/C%2B%2B-17-blue?logo=c%2B%2B)](https://isocpp.org/)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
+[![Textual](https://img.shields.io/badge/Textual-TUI-purple)](https://textual.textualize.io/)
+[![pybind11](https://img.shields.io/badge/pybind11-Latest-orange)](https://pybind11.readthedocs.io/)
+[![Architecture](https://img.shields.io/badge/Architecture-C%2B%2B%20%2B%20Python-009688)]()
+[![DSA](https://img.shields.io/badge/Data%20Structures-N--ary%20Tree%20%7C%20Merge%20Sort-informational)]()
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-success)]()
+[![Application](https://img.shields.io/badge/Application-Terminal%20(TUI)-success)]()
+[![GitHub release](https://img.shields.io/github/v/release/najmularifeen786/TUI_File_Manager)](https://github.com/najmularifeen786/TUI_File_Manager/releases/latest)
+[![Demo Video](https://img.shields.io/badge/Demo-YouTube-red?logo=youtube)](https://youtu.be/Wc0XyFCvwr4)
+[![Download](https://img.shields.io/badge/Download-Latest%20Release-success?logo=github)](https://github.com/najmularifeen786/TUI_File_Manager/releases/latest)
  
 File Ranger is a terminal-based file manager developed as a **Data Structures & Algorithms semester project** at COMSATS University Lahore. It pairs a high-performance **C++ backend** with a modern **Python Textual** interface, demonstrating real-world application of custom data structures including an N-ary Tree, Merge Sort, and a Dual-Stack navigation system.
  
