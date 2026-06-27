@@ -253,38 +253,99 @@ TUI_File_Manager/
 ---
  
 ## 🛠️ Troubleshooting
- 
-**`cmake` is not recognized**
-Install CMake from [cmake.org](https://cmake.org/download/) and add it to your system PATH. Verify with `cmake --version`.
- 
-**C++ compiler not found**
-- Windows: Install Visual Studio Build Tools with the "Desktop development with C++" workload.
-- Linux: `sudo apt-get install build-essential`
-- macOS: `xcode-select --install`
-**`No module named 'backend'`**
-The C++ extension did not build correctly. Run `python build_release.py` again and review the error output.
- 
-**Poor visual display or missing icons**
-Use a modern terminal (Windows Terminal, iTerm2, Alacritty) with a [Nerd Font](https://www.nerdfonts.com/) installed. Ensure your terminal supports 256 colors or true color.
- 
-**Navigation history not working**
-The dual-stack system supports unlimited history. If the issue persists, please open a GitHub issue with steps to reproduce.
- 
-**Linux build failure**
-Ensure `libstdc++` development packages are installed on your system.
- 
-**macOS build failure**
-Try setting the deployment target before building:
+
+### 1. Build & Compiler Issues
+
+#### `cmake` is not recognized
+
+- **Cause:** CMake is either not installed or not added to your system's environment variables.
+- **Solution:** Install CMake from [cmake.org](https://cmake.org/) and ensure you check
+  the option to add it to your system PATH. Verify the installation by running:
+
+```bash
+cmake --version
+```
+
+---
+
+#### C++ compiler not found
+
+- **Windows:** Install [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+  and make sure to check the **"Desktop development with C++"** workload during installation.
+
+- **Linux:** Install the standard build utilities:
+
+```bash
+sudo apt-get install build-essential
+```
+
+- **macOS:** Install the Xcode command-line tools:
+
+```bash
+xcode-select --install
+```
+
+---
+
+#### Windows build failure
+
+- **Solution:** Do not use the standard Command Prompt or PowerShell. Open the
+  **Developer Command Prompt for Visual Studio** (or Developer PowerShell) and
+  run the build script from there.
+
+---
+
+#### Linux build failure
+
+- **Solution:** Ensure that the `libstdc++` development packages are installed on your system.
+
+---
+
+#### macOS build failure
+
+- **Solution:** Try explicitly setting the deployment target in your terminal
+  before running the build script:
+
 ```bash
 export MACOSX_DEPLOYMENT_TARGET=10.15
 python build_release.py
 ```
- 
-**Windows build failure**
-Use the **Developer Command Prompt for Visual Studio** instead of a standard terminal.
- 
+
 ---
- 
+
+### 2. Runtime & Application Issues
+
+#### `No module named 'backend'`
+
+- **Cause:** The C++ extension module (`pybind11` binary) did not compile
+  successfully or is missing from the `ui/` directory.
+- **Solution:** Run the build script again and carefully review the terminal
+  output for compiler errors:
+
+```bash
+python build_release.py
+```
+
+---
+
+#### Navigation history not working
+
+- **Cause:** Internal state issue with the navigation stack.
+- **Note:** The underlying dual-stack system natively supports unlimited history
+  tracking. If steps are skipped or history fails to register, please open a
+  GitHub issue with the exact steps to reproduce the bug.
+
+---
+
+### 3. Display & UI Issues
+
+#### Poor visual display or missing icons
+
+- **Terminal:** Ensure you are using a modern terminal emulator that supports
+  256-color or true-color output (e.g., Windows Terminal, iTerm2, or Alacritty).
+- **Fonts:** This TUI relies heavily on glyphs. You must download and install a
+  [Nerd Font](https://www.nerdfonts.com/) (such as FiraCode Nerd Font or
+  JetBrainsMono Nerd Font) and set it as the default font in your terminal settings.
 ## 🎨 Customization
  
 **Themes** — Edit or add themes in `ui/themes.py`. Themes can also be switched at runtime via the command palette (`Ctrl+P`).
