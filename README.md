@@ -214,28 +214,29 @@ Built with **Textual** and **Rich**. The UI is event-driven, supporting both key
  
 ```
 TUI_File_Manager/
-├── assets/                   # Screenshots and media
-├── backend/                  # C++ backend implementation
+├── assets/
+│   └── image.png                          # Project screenshots and media
+├── backend/
 │   ├── include/
-│   │   ├── tree.hpp          # N-ary tree structure
-│   │   ├── stack.hpp         # Custom stack ADT
-│   │   └── file_ops.hpp      # File operation declarations
+│   │   ├── custom_stack.h                 # Custom stack ADT implementation
+│   │   ├── file_node.h                    # File/directory node structure
+│   │   └── history_manager.h              # Navigation history management
 │   └── src/
-│       ├── tree.cpp
-│       ├── stack.cpp
-│       └── file_ops.cpp
-├── bindings/                 # pybind11 bindings
-│   ├── bindings.cpp          # C++ to Python interface
-│   └── build/                # Compiled extension module
-├── ui/                       # Python UI components
-│   ├── app.py                # Main application entry point
-│   ├── themes.py             # Theme definitions
-│   └── components/           # Textual widgets
-├── build_release.py          # Build and packaging script
-├── CMakeLists.txt            # CMake configuration
-├── requirements.txt          # Python dependencies
-├── LICENSE
-└── README.md
+│       └── directory_tree.cpp             # Directory tree and core logic
+├── bindings/
+│   ├── CMakeLists.txt                     # CMake configuration for pybind11
+│   └── pybind_module.cpp                  # C++ to Python interface bindings
+├── ui/
+│   ├── app.py                             # Main application entry point
+│   ├── backend.cpython-313-x86_64-li...   # Compiled C++ extension module
+│   ├── icons.py                           # TUI icon definitions
+│   ├── input_modal.py                     # User input modal components
+│   └── layout.py                          # TUI layout and grid setup
+├── .gitignore                             # Git ignore rules
+├── LICENSE                                # Project license
+├── README.md                              # Project documentation
+├── build_release.py                       # Build and packaging script
+└── requirements.txt                       # Python dependencies
 ```
  
 ---
