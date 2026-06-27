@@ -390,12 +390,18 @@ This project is licensed under the [MIT License](LICENSE).
 ---
  
 ## 👥 Authors
- 
-**Najmul Arifeen** — Data Structures
-[GitHub](https://github.com/najmularifeen786) · [LinkedIn](https://www.linkedin.com/in/najmularifeen/) · najmularifeen786@gmail.com
- 
-**Waqar Ahmad** — Frontend UI, Backend Architecture & Integration
-[GitHub](https://github.com/WaqarAhmad321) · [LinkedIn](https://www.linkedin.com/in/waqar-ahmad321/) · codewithwaqarahmad@gmail.com
+
+### Najmul Arifeen
+**Data Structures**
+* najmularifeen786@gmail.com
+* **[GitHub](https://github.com/najmularifeen786)**
+* **[LinkedIn](https://www.linkedin.com/in/najmularifeen/)**
+
+### Waqar Ahmad
+**Frontend UI, Backend Architecture & Integration**
+* codewithwaqarahmad@gmail.com
+* **[GitHub](https://github.com/WaqarAhmad321)**
+* **[LinkedIn](https://www.linkedin.com/in/waqar-ahmad321/)**
  
 ---
  
