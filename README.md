@@ -1,56 +1,62 @@
-# 📂 File Ranger - High-Performance TUI File Manager
+# 📂 File Ranger
 
-A high-performance terminal-based file manager built with a hybrid architecture that combines the speed of **C++** for backend operations with the modern UI capabilities of **Python (Textual)**. File Ranger delivers a seamless, efficient file management experience directly in your terminal with advanced data structures and algorithms at its core.
+**A high-performance terminal file manager built with C++ and Python.**
 
-![File Ranger Demo](./assets/image.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![C++](https://img.shields.io/badge/C%2B%2B-17-blue)](https://isocpp.org/)
+[![CMake](https://img.shields.io/badge/CMake-3.15%2B-blue)](https://cmake.org/)
+[![Build](https://img.shields.io/badge/Build-Passing-brightgreen)]()
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)]()
+
+File Ranger is a terminal-based file manager developed as a **Data Structures & Algorithms semester project** at COMSATS University Lahore. It pairs a high-performance **C++ backend** with a modern **Python Textual** interface, demonstrating real-world application of custom data structures including an N-ary Tree, Merge Sort, and a Dual-Stack navigation system.
+
+![File Ranger](./assets/image.png)
+
+## 📽️ Demo Video
+
+> Watch the full project walkthrough:
+
+**[▶ Click here to watch the demo](https://youtu.be/Wc0XyFCvwr4)**
 
 ---
 
+## Download
 
-![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.gif)
+Pre-built standalone executables are available in the [Releases](https://github.com/najmularifeen786/TUI_File_Manager/releases) section.
 
-## 📋 Table of Contents
+1. Go to [Releases](https://github.com/najmularifeen786/TUI_File_Manager/releases).
+2. Download the latest `file_ranger.exe` (Windows) or `file_ranger` (Linux/macOS).
+3. Run the executable — no installation required.
 
-- [Features](#-features)
-- [System Requirements](#-system-requirements)
-- [Installation](#-installation)
-- [Usage](#️-usage)
-- [Keyboard Shortcuts](#️-keyboard-shortcuts)
-- [Architecture & Data Structures](#️-architecture--data-structures)
-- [Project Structure](#-project-structure)
-- [Troubleshooting](#️-troubleshooting)
-- [Customization](#-customization)
-- [Contributing](#-contributing)
-- [Performance Benchmarks](#-performance-benchmarks)
-- [License](#-license)
-- [Acknowledgments](#-acknowledgments)
-- [Authors](#-authors)
+Developers who want to build from source can follow the [Installation](#installation) guide below.
+
 ---
 
 ## ✨ Features
 
-### Core Functionality
-- **Lightning-Fast Performance**: C++ backend with custom N-ary tree structure for filesystem hierarchy
-- **Smart Sorting**: Manual merge sort implementation with guaranteed O(N log N) performance
-- **Browser-Style Navigation**: Dual-stack architecture enabling forward/backward navigation with O(1) operations
-- **Full File Operations**: Create, rename, delete, copy, paste files and directories with recursive algorithms
-- **Binary Size Display**: Real-time file and directory size calculation in binary format
-- **Duplicate Name Prevention**: Intelligent validation system that prevents naming conflicts with error handling
+### File Operations
+- Create, rename, delete, copy, and paste files and directories
+- Recursive directory traversal with no depth limit
+- Automatic duplicate name prevention with error handling
+- Real-time binary file size display
 
-### User Interface
-- **Modern TUI**: Beautiful, responsive terminal interface built with Textual and Rich
-- **Three-Pane Layout**: Organized view with directory tree, file list, and real-time preview
-- **Multiple Themes**: Customizable color schemes to personalize your experience
-- **Color-Coded Items**: Visual distinction between files (white) and folders (blue)
-- **Dual Input Support**: Full keyboard shortcuts (Vim-style) and mouse navigation
-- **File Icons**: Enhanced visual representation with icon support
-- **Unlimited Depth**: Handle any directory depth without stack overflow
+### Navigation
+- Browser-style back/forward history via a dual-stack architecture
+- Three-pane layout: directory tree, file list, and live preview
+- Vim-style keyboard shortcuts and full mouse support
 
-### Technical Highlights
-- **Zero-Copy Architecture**: Efficient data transfer between C++ and Python
-- **Memory-Safe Design**: Smart pointers throughout C++ codebase
-- **Custom Stack ADT**: Complete stack implementation for navigation system
-- **Cross-Language Integration**: Seamless C++/Python binding via pybind11
+### Interface
+- Modern TUI built with Python Textual and Rich
+- Multiple color themes, color-coded items, and file icons
+- Command palette for quick access to actions
+
+### Performance
+- C++ backend with custom N-ary Tree for filesystem representation
+- Manual Merge Sort — O(N log N) guaranteed, no STL sort dependency
+- O(1) navigation operations via the dual-stack system
+- Smart pointer memory management throughout the C++ codebase
+- Zero-copy data transfer between C++ and Python via pybind11
 
 ---
 
@@ -63,6 +69,7 @@ A high-performance terminal-based file manager built with a hybrid architecture 
   - Windows: Visual Studio Build Tools with C++ support
   - Linux: GCC 7+ or Clang 5+
   - macOS: Xcode Command Line Tools
+
 
 ### Prerequisites
 
@@ -81,14 +88,15 @@ Before installation, ensure you have:
 ## 🚀 Installation
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/najmularifeen786/TUI_File_Manager.git
-cd file_ranger
+cd TUI_File_Manager
 ```
 
-### 2. Create Virtual Environment
+### 2. Create a Virtual Environment
 
-**Linux/macOS:**
+**Linux / macOS:**
 ```bash
 python3 -m venv venv
 source venv/bin/activate
@@ -100,21 +108,50 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-**Note for Windows**: If you encounter a security error, run:
-```powershell
-Set-ExecutionPolicy Unrestricted -Scope Process
-```
+> If PowerShell blocks activation, run: `Set-ExecutionPolicy Unrestricted -Scope Process`
 
 ### 3. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Build the C++ Backend
+### 4. Build the Application
 
-This compiles the C++ source code into a Python extension module:
+This single command compiles the C++ backend, creates the Python extension, and packages the project with PyInstaller:
+
 ```bash
 python build_release.py
+```
+
+On success, the executable will be available at:
+
+```
+dist/
+└── file_ranger.exe   # Windows
+└── file_ranger       # Linux / macOS
+```
+
+---
+
+## Usage
+
+### Running the Executable
+
+**Windows:**
+```
+dist\file_ranger.exe
+```
+
+**Linux / macOS:**
+```bash
+./dist/file_ranger
+```
+
+### Running from Source (Developers)
+
+```bash
+python ui/app.py
 ```
 
 ---
@@ -152,22 +189,22 @@ python -m file_ranger
 ## 🏗️ Architecture & Data Structures
 
 ### Backend (C++)
-- **N-ary Tree**: Custom implementation for filesystem hierarchy representation
-- **Merge Sort**: Manual O(N log N) sorting without STL dependencies
-- **Dual-Stack System**: Efficient forward/backward navigation with O(1) operations
-- **Custom Stack ADT**: Full-featured stack implementation
-- **Recursive Algorithms**: Efficient directory traversal and manipulation
+
+| Structure | Purpose |
+|-----------|---------|
+| N-ary Tree | Represents the filesystem hierarchy |
+| Merge Sort | Sorts directory entries in O(N log N) |
+| Dual-Stack ADT | Powers forward/backward navigation in O(1) |
+| Recursive Algorithms | Directory traversal and file operations |
+| Smart Pointers | Memory-safe ownership throughout the codebase |
 
 ### Frontend (Python)
-- **Textual Framework**: Modern TUI with rich components
-- **Event-Driven Architecture**: Responsive keyboard and mouse handling
-- **Theme System**: Multiple customizable color schemes
-- **Real-Time Preview**: Dynamic content updates
 
-### Integration Layer
-- **pybind11**: Type-safe C++ to Python bindings
-- **CMake Build System**: Cross-platform compilation
-- **Zero-Copy Data Transfer**: Optimal performance between languages
+Built with **Textual** and **Rich**. The UI is event-driven, supporting both keyboard and mouse input, with a live-updating three-pane layout and a pluggable theme system.
+
+### Integration
+
+**pybind11** provides type-safe C++ to Python bindings, with a **CMake** build system for cross-platform compilation. Data is transferred between layers with zero-copy semantics for optimal performance.
 
 ---
 
@@ -265,16 +302,18 @@ We welcome contributions! Here's how you can help:
 
 ## 📊 Performance Benchmarks
 
-- **Directory Loading**: O(N) where N is number of items
-- **Sorting**: O(N log N) guaranteed with merge sort
-- **Navigation**: O(1) with dual-stack architecture
-- **Memory**: Efficient with smart pointers and zero-copy transfers
+| Operation | Complexity |
+|-----------|------------|
+| Directory traversal | O(N) |
+| Sorting (Merge Sort) | O(N log N) |
+| Navigation (back/forward) | O(1) |
+| Copy / Delete | Recursive |
 
 ---
 
 ## 📝 License
 
-This project is open source and available under the MIT License.
+This project is open source and available under the  [MIT License](LICENSE).
 
 ---
 
@@ -312,4 +351,5 @@ If you find File Ranger useful, please consider giving it a star on GitHub!
 
 ---
 
+*Built as a Data Structures & Algorithms semester project at COMSATS University Lahore.*
 **Built as a DSA semester project at COMSATS University Lahore** - Demonstrating that data structures and algorithms aren't just theory, but the foundation of efficient, real-world systems.
